@@ -49,11 +49,13 @@ public class SystemResource {
 
     @GetMapping
     public String applicationInfo() {
-        String appInfo = "{\"version\":\"" + this.artifact + "::" + this.version + "::" + this.build + "\"} <br> <br>";
-        appInfo += "/version-badge <br><br>";
-        appInfo += "/actuator/info <br> /actuator/health <br><br>";
-        appInfo += "/swagger-ui.html  <br> /v3/api-docs <br>";
-        return appInfo;
+        // Use StringBuilder for better performance and security
+        StringBuilder appInfo = new StringBuilder();
+        appInfo.append("{\"version\":\"").append(this.artifact).append("::").append(this.version).append("::").append(this.build).append("\"} <br> <br>");
+        appInfo.append("/version-badge <br><br>");
+        appInfo.append("/actuator/info <br> /actuator/health <br><br>");
+        appInfo.append("/swagger-ui.html  <br> /v3/api-docs <br>");
+        return appInfo.toString();
     }
 
     @GetMapping(value = VERSION_BADGE, produces = {"image/svg+xml"})

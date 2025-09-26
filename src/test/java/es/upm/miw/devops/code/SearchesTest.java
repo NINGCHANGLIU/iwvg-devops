@@ -31,7 +31,7 @@ class SearchesTest {
         assertThat(new Searches().findUserFamilyNameInitialByAnyProperFraction()).isNotNull();
         assertThat(new Searches().findUserIdByAnyProperFraction()).isNotNull();
         assertThat(new Searches().findFractionMultiplicationByUserFamilyName("Torres")).isNotNull();
-        assertThat(new Searches().findFirstFractionDivisionByUserId("2")).isNotNull();
+        assertThat(new Searches().findFractionDivisionByUserId("2")).isNotNull();
         assertThat(new Searches().findFirstDecimalFractionByUserName("Oscar")).isNotNull();
         assertThat(new Searches().findUserIdByAllProperFraction()).isNotNull();
         assertThat(new Searches().findDecimalImproperFractionByUserName("Ana")).isNotNull();
@@ -66,11 +66,11 @@ class SearchesTest {
     }
 
     @Test
-    void testFindFirstFractionDivisionByUserId_2() {
-        Fraction f = new Searches().findFirstFractionDivisionByUserId("2");
+    void testFindFractionDivisionByUserId_2() {
+        Fraction f = new Searches().findFractionDivisionByUserId("2");
         assertThat(f).isNotNull();
-        assertThat(f.getNumerator()).isEqualTo(10);
-        assertThat(f.getDenominator()).isEqualTo(-1);
+        assertThat(f.getNumerator()).isEqualTo(120);
+        assertThat(f.getDenominator()).isEqualTo(-8);
     }
 
     @Test

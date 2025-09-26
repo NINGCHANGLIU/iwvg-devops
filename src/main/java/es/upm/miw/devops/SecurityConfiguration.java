@@ -20,6 +20,8 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 @EnableMethodSecurity
 public class SecurityConfiguration {
 
+    private static final int HSTS_MAX_AGE_SECONDS = 31536000; // 1 year
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
@@ -32,7 +34,7 @@ public class SecurityConfiguration {
                         .referrerPolicy(rp -> rp.policy(ReferrerPolicyHeaderWriter.ReferrerPolicy.NO_REFERRER))
                         .httpStrictTransportSecurity(hsts -> hsts
                                 .includeSubDomains(true)
-                                .maxAgeInSeconds(31536000))
+                                .maxAgeInSeconds(HSTS_MAX_AGE_SECONDS))
                         .contentSecurityPolicy(csp -> csp.policyDirectives("default-src 'self'"))
                 )
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS))
