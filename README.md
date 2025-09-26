@@ -2,12 +2,8 @@
 ## Ingeniería Web: Visión General (IWVG) DevOps
 > Este proyecto es un apoyo docente de la asignatura. Cada release liberada corresponde al código utilizado en clase del curso indicado
 
-[![GitHub](https://img.shields.io/github/license/miw-upm/iwvg-devops?color=informational)](https://github.com/miw-upm/iwvg-devops/blob/develop/LICENSE.md)
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/miw-upm/iwvg-devops?color=informational)](https://github.com/miw-upm/iwvg-devops/releases)
-![GitHub Release Date](https://img.shields.io/github/release-date/miw-upm/iwvg-devops?color=informational)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/miw-upm/iwvg-devops)
-![GitHub issues](https://img.shields.io/github/issues/miw-upm/iwvg-devops?color=important)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/miw-upm/iwvg-devops?color=informational)
+[![CI](https://github.com/NINGCHANGLIU/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/NINGCHANGLIU/iwvg-devops/actions/workflows/continuous-integration.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NINGCHANGLIU_iwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NINGCHANGLIU_iwvg-devops)
 
 ### Estado del código
 [![DevOps](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml)
@@ -61,7 +57,7 @@ docker compose up --build -d
 > Todo el software deberá estar en ingles.
 
 #### 1. Crear un proyecto (**0.5 pto**)
-Crear un proyecto Maven llamado: **iwvg-devops-apellido-nombre**, versión **4.0.0**. Para ello se aporta **zip** de la
+Crear un proyecto Maven llamado: **iwvg-devops-apellido-nombre**, versión **5.0.0**. Para ello se aporta **zip** de la
 plantilla.
 > Recordar editar el pom y cambiar el nombre del artefacto (artifactId).   
 > Recordar cambiar el nombre de la  carpeta.   
@@ -79,7 +75,7 @@ Se crearán las siguientes 2 historias (**Issues**) pero se trabajarán en las r
 > :one:, :two:... representa el orden temporal de desarrollo de los issues.
 
 #### 4. Release (**0.5 pto**)
-> Realizar la primera liberación del código (_**v.4.0.0-release**_)
+> Realizar la primera liberación del código (_**v.5.0.0-release**_)
 
 #### 5. Sprint 2. Preparación del software a desarrollar (**2 ptos**)
 Se crearán las siguientes 4 historias (**Issues**).
@@ -90,7 +86,7 @@ Se crearán las siguientes 4 historias (**Issues**).
 
 > :one:, :two:... representa el orden temporal de desarrollo de los issues. Cuando un issue se termine se debe incorporar a la rama **develop**. Las clases User, Fraction y UsersDatabase se podrán copiar de las dadas en clase.
 
-> Realizar la segunda liberación del código (_**v.4.1.0-release**_)
+> Realizar la segunda liberación del código (_**v.5.1.0-release**_)
 
 #### 6. Sprint 3. Preparación de cuatro búsquedas a partir de las siguientes, según el valor de las primeros cuatro valores distintos del último commit realizado de la liberación anterior, se creará una historia (**
 Issues**) por cada búsqueda, con el test correspondiente (**3.5 ptos**).
@@ -112,10 +108,10 @@ Issues**) por cada búsqueda, con el test correspondiente (**3.5 ptos**).
 * `e` Fraction findFractionAdditionByUserId(String id);
 * `f` Fraction findFractionSubtractionByUserName(String name);
 
-> Realizar la tercera liberación del código (_**v.4.2.0-release**_)
+> Realizar la tercera liberación del código (_**v.5.2.0-release**_)
 
 #### 7. Bug (**1.5 ptos**)
-> Suponer que la búsqueda 3 anterior no es buena y se debe proceder a modificarla. Realizar un cambio y proceder a la cuarta liberación del código (_**v.4.2.1-release**_).
+> Suponer que la búsqueda 3 anterior no es buena y se debe proceder a modificarla. Realizar un cambio y proceder a la cuarta liberación del código (_**v.5.2.1-release**_).
 
 ### :white_check_mark: Criterios transversales **con pérdida de puntos por falta de calidad**
 * Uso correcto del flujo de trabajo ramificado. **Hasta -3 ptos**. 
