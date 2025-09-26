@@ -2,9 +2,6 @@
 ## Ingeniería Web: Visión General (IWVG) DevOps
 > Este proyecto es un apoyo docente de la asignatura. Cada release liberada corresponde al código utilizado en clase del curso indicado
 
-[![CI](https://github.com/NINGCHANGLIU/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/NINGCHANGLIU/iwvg-devops/actions/workflows/continuous-integration.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NINGCHANGLIU_iwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NINGCHANGLIU_iwvg-devops)
-
 ### Estado del código
 [![CI](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/NINGCHANGLIU/iwvg-devops/actions/workflows/continuous-integration.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NINGCHANGLIU_iwvg-devops)

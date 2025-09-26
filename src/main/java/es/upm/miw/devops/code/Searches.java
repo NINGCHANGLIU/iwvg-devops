@@ -66,13 +66,6 @@ public class Searches {
         return result.orElse(null);
     }
 
-    /**
-     * Deprecated: kept for backward compatibility. Previously divided only the first two fractions.
-     */
-    @Deprecated
-    public Fraction findFirstFractionDivisionByUserId(String id) {
-        return findFractionDivisionByUserId(id);
-    }
 
     public Double findFirstDecimalFractionByUserName(String name) {
         return new UsersDatabase().findAll()
