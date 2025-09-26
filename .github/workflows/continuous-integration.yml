@@ -53,10 +53,12 @@ jobs:
 
       - name: 📊 Sonar Analysis
         run: >
-          mvn -B sonar:sonar 
+          mvn -B sonar:sonar
           -Dsonar.projectKey=NINGCHANGLIU_iwvg-devops
-          -Dsonar.organization=ningchangliu 
-          -Dsonar.host.url=https://sonarcloud.io 
+          -Dsonar.organization=ningchangliu
+          -Dsonar.host.url=https://sonarcloud.io
+          -Dsonar.java.coveragePlugin=jacoco
+          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
           -Dsonar.token=${{ secrets.SONAR_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
