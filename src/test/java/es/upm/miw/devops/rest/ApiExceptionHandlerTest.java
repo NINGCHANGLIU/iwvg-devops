@@ -25,7 +25,7 @@ class ApiExceptionHandlerTest {
         ErrorMessage msg = handler.exception(new Exception("details"));
         assertThat(msg.getCode()).isEqualTo(500);
         assertThat(msg.getError()).isEqualTo("Internal Server Error");
-        assertThat(msg.getMessage()).isEqualTo("Unexpected error");
+        assertThat(msg.getMessage()).isEqualTo("An unexpected error occurred");
     }
 }
 
