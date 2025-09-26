@@ -10,6 +10,8 @@ class FractionTest {
     @Test
     void testDecimal() {
         assertThat(new Fraction(1, 2).decimal()).isCloseTo(0.5, within(1e-5));
+        assertThat(new Fraction(1, 0).decimal()).isInfinite();
+        assertThat(new Fraction(0, 0).decimal()).isNaN();
     }
 
     @Test
@@ -23,6 +25,7 @@ class FractionTest {
     void testEquivalent() {
         assertThat(new Fraction(1, 2).isEquivalent(new Fraction(2, 4))).isTrue();
         assertThat(new Fraction(1, 2).isEquivalent(new Fraction(3, 4))).isFalse();
+        assertThat(new Fraction(1, 2).isEquivalent(null)).isFalse();
     }
 
     @Test
@@ -40,6 +43,22 @@ class FractionTest {
         Fraction div = a.divide(b); // (1/2) / (1/3) = 3/2
         assertThat(div.getNumerator()).isEqualTo(3);
         assertThat(div.getDenominator()).isEqualTo(2);
+    }
+
+    @Test
+    void testConstructorsGettersSettersAndToString() {
+        Fraction f = new Fraction();
+        assertThat(f.getNumerator()).isEqualTo(1);
+        assertThat(f.getDenominator()).isEqualTo(1);
+
+        f.setNumerator(7);
+        f.setDenominator(-9);
+        assertThat(f.getNumerator()).isEqualTo(7);
+        assertThat(f.getDenominator()).isEqualTo(-9);
+
+        String text = f.toString();
+        assertThat(text).contains("numerator=7");
+        assertThat(text).contains("denominator=-9");
     }
 }
 

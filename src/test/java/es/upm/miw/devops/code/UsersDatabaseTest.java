@@ -8,8 +8,9 @@ class UsersDatabaseTest {
 
     @Test
     void testFindAllContainsExpectedUsers() {
-        long count = new UsersDatabase().findAll().count();
-        assertThat(count).isEqualTo(6);
+        UsersDatabase db = new UsersDatabase();
+        assertThat(db.findAll().count()).isEqualTo(6);
+        assertThat(db.findAll().filter(u -> "2".equals(u.getId())).findFirst()).isPresent();
     }
 }
 
