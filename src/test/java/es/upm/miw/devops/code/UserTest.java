@@ -23,6 +23,27 @@ class UserTest {
         user.addFraction(new Fraction(1, 2));
         assertThat(user.getFractions()).hasSize(1);
     }
+
+    @Test
+    void testGettersSettersAndToString() {
+        User user = new User();
+        assertThat(user.getFractions()).isEmpty();
+        user.setName("Bob");
+        user.setFamilyName("Brown");
+        user.addFraction(new Fraction(2, 3));
+        String s = user.toString();
+        assertThat(s).contains("name='Bob'");
+        assertThat(s).contains("familyName='Brown'");
+
+        assertThat(user.getFamilyName())
+                .isEqualTo("Brown");
+        assertThat(user.getFractions())
+                .hasSize(1);
+
+        user.setFractions(List.of(new Fraction(3, 4)));
+        assertThat(user.getFractions())
+                .hasSize(1);
+    }
 }
 
 
