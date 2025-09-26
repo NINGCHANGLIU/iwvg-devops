@@ -7,9 +7,8 @@
 
 ### Estado del código
 [![DevOps](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=es.upm.miw%3Aiwvg-devops)
-[![Render](https://img.shields.io/badge/Render-Live-brightgreen)](https://YOUR-RENDER-URL)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NINGCHANGLIU_iwvg-devops)
+[![Render](https://img.shields.io/badge/Render-Live-brightgreen)](https://iwvg-devops-79nv.onrender.com)
 
 
 ### Tecnologías necesarias
@@ -52,7 +51,7 @@ docker compose up --build -d
 ### :book: Diapositivas
 * [Diapositivas de DevOps](docs/miw-iwvg-devops-slides.pdf)   
 
-### :dvd: [Plantilla de la práctica en _docs/template-webflux.zip_](docs/template-webflux-3.4.zip)
+### :dvd: [Plantilla de la práctica en _docs/iwvg-devops-template.zip_](docs/iwvg-devops-template.zip)
 
 ### :page_with_curl: IWVG. Devops. Enunciado de la práctica
 > Todo el software deberá estar en ingles.
@@ -66,14 +65,16 @@ plantilla.
 > Crear un repositorio en GitHub con el mensaje del primer comit: "Initial. Nombre Apellido"   
  
 #### 2. Preparar la gestión mediante Scrum (**0.5 pto**)
-> Crear un proyecto de gestión en GitHub y prepararlo para la metodología de Scrum (columnas, etiquetas, hitos...).   
+> Crear un proyecto de gestión en GitHub y prepararlo para la metodología de Scrum (columnas, etiquetas, hitos...). 
+> Recordar hacerlo `public` para que se pueda visualizar.
 
 #### 3. Sprint 1. Preparación del ecosistema (**1.5 ptos**)
-Se crearán las siguientes 2 historias (**Issues**) pero se trabajarán en las ramas **develop** & **master**.
+Se crearán las siguientes 3 historias (**Issues**) pero se trabajarán solo con las ramas **develop** & **master**.
 
 * :one: Integración continua con **GitHub Actions**. Incluir **Badge** en README con **link**.
 * :two: Análisis del código con **Sonarcloud**. Incluir **Badge** en README con **link** a la cuenta de Sonar.
-> :one:, :two:... representa el orden temporal de desarrollo de los issues.
+* :three: Deploy con **Render**. Incluir **Badge** en README con **link** a la cuenta de Render.
+> :one:, :two:, :three: representa el orden temporal de desarrollo de los issues.
 
 #### 4. Release (**0.5 pto**)
 > Realizar la primera liberación del código (_**v.5.0.0-release**_)
@@ -89,8 +90,7 @@ Se crearán las siguientes 4 historias (**Issues**).
 
 > Realizar la segunda liberación del código (_**v.5.1.0-release**_)
 
-#### 6. Sprint 3. Preparación de cuatro búsquedas a partir de las siguientes, según el valor de las primeros cuatro valores distintos del último commit realizado de la liberación anterior, se creará una historia (**
-Issues**) por cada búsqueda, con el test correspondiente (**3.5 ptos**).
+#### 6. Sprint 3. Preparación de cuatro búsquedas a partir de las siguientes, según el valor de las primeros cuatro valores distintos del último commit realizado de la liberación anterior, se creará una historia (**Issues**) por cada búsqueda, con el test correspondiente (**3.5 ptos**).
 
 * `0` Stream&lt;String> findUserFamilyNameInitialBySomeProperFraction();
 * `1` Stream&lt;String> findUserIdBySomeProperFraction();
@@ -117,7 +117,7 @@ Issues**) por cada búsqueda, con el test correspondiente (**3.5 ptos**).
 ### :white_check_mark: Criterios transversales **con pérdida de puntos por falta de calidad**
 * Uso correcto del flujo de trabajo ramificado. **Hasta -3 ptos**. 
 * Adecuación de la temporalidad de desarrollo según el enunciado. **Hasta -3 ptos**.
-* Mantenimiento de calidad del código según GitHub Actions, Sonar, Better Code Hub. Cobertura >= 80%. **Hasta -2 ptos**.
+* Mantenimiento de calidad del código según GitHub Actions, Sonar. Cobertura >= 80%. **Hasta -2 ptos**.
 * Gestión adecuada, completa y equlibrada (estimación, tiempo real...) durante el desarrollo. **Hasta -2 ptos**.
 * Commits correctos y completos. **Hasta -2 ptos**. 
 * Código limpio, bien formateado y ordenado. **Hasta -2 ptos**. 
