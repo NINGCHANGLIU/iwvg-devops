@@ -19,8 +19,9 @@ public class ApiExceptionHandler {
     })
     @ResponseBody
     public ErrorMessage noResourceFoundRequest(Exception exception) {
-        return new ErrorMessage(new RuntimeException(
-                "Ruta no encontrada. Prueba con: **/actuator/info o **/swagger-ui.html o **/v3/api-docs o **/v3/api-docs.yaml"),
+        return new ErrorMessage(
+                "Not Found",
+                "Resource not found. Try: /actuator/info, /swagger-ui.html, /v3/api-docs, /v3/api-docs.yaml",
                 HttpStatus.NOT_FOUND.value());
     }
 
@@ -30,7 +31,10 @@ public class ApiExceptionHandler {
     })
     @ResponseBody
     public ErrorMessage exception(Exception exception) {
-        return new ErrorMessage(new RuntimeException("ERROR"), HttpStatus.INTERNAL_SERVER_ERROR.value());
+        return new ErrorMessage(
+                "Internal Server Error",
+                "Unexpected error",
+                HttpStatus.INTERNAL_SERVER_ERROR.value());
     }
 
 }
