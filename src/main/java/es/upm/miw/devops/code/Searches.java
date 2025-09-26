@@ -54,12 +54,24 @@ public class Searches {
         return new Fraction(acc[0], acc[1]);
     }
 
-    public Fraction findFirstFractionDivisionByUserId(String id) {
+    /**
+     * Divide all fractions of the user with given id from left to right.
+     * Returns null if the user has fewer than two fractions.
+     */
+    public Fraction findFractionDivisionByUserId(String id) {
         Optional<Fraction> result = new UsersDatabase().findAll()
                 .filter(user -> id.equals(user.getId()))
                 .findFirst()
-                .flatMap(u -> u.getFractions().stream().limit(2).reduce((a, b) -> a.divide(b)));
+                .flatMap(u -> u.getFractions().stream().reduce((a, b) -> a.divide(b)));
         return result.orElse(null);
+    }
+
+    /**
+     * Deprecated: kept for backward compatibility. Previously divided only the first two fractions.
+     */
+    @Deprecated
+    public Fraction findFirstFractionDivisionByUserId(String id) {
+        return findFractionDivisionByUserId(id);
     }
 
     public Double findFirstDecimalFractionByUserName(String name) {

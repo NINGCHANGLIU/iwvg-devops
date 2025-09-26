@@ -6,9 +6,9 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NINGCHANGLIU_iwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NINGCHANGLIU_iwvg-devops)
 
 ### Estado del código
-[![DevOps](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml)
+[![CI](https://github.com/miw-upm/iwvg-devops/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/NINGCHANGLIU/iwvg-devops/actions/workflows/continuous-integration.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NINGCHANGLIU_iwvg-devops)
-[![Render](https://img.shields.io/badge/Render-Live-brightgreen)](https://iwvg-devops-79nv.onrender.com)
+[![Render](https://img.shields.io/badge/Render-Live-brightgreen)](https://iwvg-devops-79nv.onrender.com/swagger-ui/index.html)
 
 
 ### Tecnologías necesarias
